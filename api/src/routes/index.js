@@ -4,6 +4,8 @@ const { Router } = require('express');
 const getPokemonDetail = require('../controllers/getPokemonDetail');
 const getPokemon = require('../controllers/getPokemon');
 const getPokemonByName = require("../controllers/getPokemonByName");
+const postPokemon = require('../controllers/postPokemon');
+const getTypes = require('../controllers/getTypes');
 
 
 const router = Router();
@@ -13,6 +15,9 @@ const router = Router();
 router.get('/pokemons', getPokemon);
 router.get('/pokemons/name', getPokemonByName);
 router.get('/pokemons/:idPokemon', getPokemonDetail);
+router.get('/types', getTypes)
+
+router.post('/pokemons', postPokemon)
 
 
 
